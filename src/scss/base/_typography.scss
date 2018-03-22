@@ -2,25 +2,8 @@
 Fonts
 ---------------------------------------------*/
 
-@include font-face(circularBook, fonts/CircularStd-Book);
-@include font-face(circularMed, fonts/CircularStd-Medium);
-@include font-face(circularBold, fonts/CircularStd-Bold);
+@include font-face(PoppinsRegular, assets/fonts/PoppinsRegular);
 
-@include font-face(playfairN, fonts/playfairdisplay-regular);
-@include font-face(playfairI, fonts/playfairdisplay-italic);
-@include font-face(playfairB, fonts/playfairdisplay-bold);
+%PoppinsRegular{ font-family: "Poppins"; font-weight:400; }
 
-
-%circularBook{ font-family: "circularBook"; font-weight:300; }
-%circularMed{ font-family: "circularMed"; font-weight:500; }
-%circularBold{ font-family: "circularBold"; }
-
-%playfairN { font-family: 'Playfair Display', serif; font-weight: 300; }
-%playfairI{ font-family: 'Playfair Display', serif; font-style:italic;}
-%playfairB{ font-family: 'Playfair Display', serif; font-weight:700;}
-
-@mixin fontsize($size) {
-	font-size: $size * 1px;
-	font-size: $size * 0.1rem;
-}
 
