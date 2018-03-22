@@ -6,6 +6,6 @@
 
 3/ cmd: cd starter_html
 
-4/ cmd: npm install, puis attendre la fin
+4/ cmd: npm install
 
 5/ cmd: gulp
