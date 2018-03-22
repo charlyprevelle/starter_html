@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp        = require('gulp'),
+	babel 		= require("gulp-babel"),
     sass        = require('gulp-sass'),
     cssmin      = require('gulp-cssmin'),
     rename      = require('gulp-rename'),
@@ -14,9 +15,8 @@ var gulp        = require('gulp'),
 gulp.task('serve', ['sass', 'js'], function() {
 
     browserSync.init({
-        server: './',
-        browser: "google chrome canary"
-    });
+        server: './'
+	});
 
     gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('src/js/**/*.js', ['js']);
@@ -37,6 +37,7 @@ gulp.task('sass', function () {
 // Configure JS.
 gulp.task('js', function() {
   return gulp.src('src/js/**/*.js')
+	.pipe(babel())
     .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(rename({suffix: '.min'}))

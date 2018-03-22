@@ -1,0 +1,84 @@
+/*--------------------------------------------
+Normalize
+---------------------------------------------*/
+
+* {
+	box-sizing: border-box;
+	-webkit-padding-start: 0px;
+}
+
+html, body{
+	font-size: 62.5%;
+	font-family: sans-serif;
+	width:100%;
+	height:100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+body, ul, p{
+	margin:0;
+	padding:0;
+}
+
+// My Normalize 
+
+h1, h2, h3, h4{
+	margin:0;
+	font-weight:normal;
+}
+
+h2, h3{
+	@include fontsize(16);
+	color:$black;
+}
+
+p{
+	@extend %circularBook;
+	@include fontsize(18);
+	line-height: 35px;
+	color:$gray;
+}
+
+
+button{
+	outline:none;
+	background:none;
+	border:none;
+	border-radius:0;
+	padding:0;
+	cursor:pointer;
+}
+
+///////////////////////////
+
+
+
+
+
+
+blockquote{
+	margin: 0;
+	outline:none;
+}
+
+li{
+	list-style: none;
+}
+
+h1 {
+	font-size: 2em;
+
+}
+
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	text-decoration: none;
+	color: $black;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+	outline-width: 0;
+}
